@@ -17,6 +17,10 @@ void main() async {
     providerApple: AppleDebugProvider(), // Use AppleAppAttestProvider() for production later
   );
 
+  final token = await FirebaseAppCheck.instance.getToken();
+  debugPrint('App Check debug token: $token');
+
+
   runApp(const MyApp());
 }
 
